@@ -33,7 +33,7 @@ app.get("/artist/:id", (req: Request, res: Response) => {
   }
 });
 
-app.get("/getFestivalsByArtists", (req: Request, res: Response) => {
+app.post("/getFestivalsByArtists", (req: Request, res: Response) => {
   const { artistIds } = req.body;
 
   if (!Array.isArray(artistIds) || artistIds.length === 0) {
